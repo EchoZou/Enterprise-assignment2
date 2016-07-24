@@ -1,0 +1,17 @@
+﻿@using assignment2.Models
+@model Genre
+
+@{
+    ViewBag.Title = "Browse";
+}
+
+<h2>Browsing Genre: @Model.Name</h2>
+
+<ul>
+    @foreach (Item item in Model.Items)
+    {
+        <li>
+            @Html.ActionLink(item.Title, "Details", new { id = item.ItemID })
+        </li>
+    }
+</ul>

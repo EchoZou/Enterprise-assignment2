@@ -1,0 +1,48 @@
+﻿@using assignment2.Models
+@model IEnumerable<Genre>
+
+
+@{
+    ViewBag.Title = "Index";
+
+}
+
+<h3>Browse Genres</h3>
+<p>
+    Select from @Model.Count()
+    genres:
+</p>
+
+<table>
+    <thead>
+        <tr>
+            <td>Picture</td>
+            <td>Item</td>
+            <td>Description</td>
+            <td>Price</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (Genre item in Model)
+        {
+            <tr>
+                <td><a href="#" class="thumbnail"><img src="@Model.Item.URL" alt="@Model.Item.Title"></a></td>
+                <td>@Html.ActionLink(item.Name, "Browse", new { genre = item.Name })</td>
+                <td>@Model.Item.ShortDescription</td>
+                <td>@Model.Item.Price</td>
+            </tr>
+        }
+    </tbody>
+    
+
+
+        
+        
+        
+        
+
+    
+</table>
+
+
