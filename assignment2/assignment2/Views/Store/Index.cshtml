@@ -13,36 +13,10 @@
     genres:
 </p>
 
-<table>
-    <thead>
-        <tr>
-            <td>Picture</td>
-            <td>Item</td>
-            <td>Description</td>
-            <td>Price</td>
-        </tr>
-    </thead>
-
-    <tbody>
-        @foreach (Genre item in Model)
-        {
-            <tr>
-                <td><a href="#" class="thumbnail"><img src="@Model.Item.URL" alt="@Model.Item.Title"></a></td>
-                <td>@Html.ActionLink(item.Name, "Browse", new { genre = item.Name })</td>
-                <td>@Model.Item.ShortDescription</td>
-                <td>@Model.Item.Price</td>
-            </tr>
-        }
-    </tbody>
-    
-
-
-        
-        
-        
-        
-
-    
-</table>
-
+<ul>
+    @foreach (Genre item in Model)
+    {
+        <li>@Html.ActionLink(item.Name, "Browse", new { genre = item.Name })</li>
+    }
+</ul>
 
