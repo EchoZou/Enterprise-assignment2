@@ -18,8 +18,6 @@ namespace assignment2.Models
                 new Menu { Name = "Beverages" }
             };
 
-            
-
             new List<Item>
             {
                 new Item { Title = "Seaweed Salad", Menu = menus.Single(g => g.Name == "Appetizer"), ShortDescription="short description", DetailedDescription="this is detailed description", Price = 8.99M, URL = "/Content/Images/placeholder.gif" },
