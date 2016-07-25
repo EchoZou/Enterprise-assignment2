@@ -15,9 +15,10 @@
             <div class="thumbnail">
                 <img src="@item.URL" alt="@item.Title" />
                 <p>@Html.ActionLink(item.Title, "Details", new { id = item.ItemID })</p>
-                <p>"ShortDescription:" @item.ShortDescription</p>
-                <p>"Price :" @item.Price</p>
+                <p>ShortDescription: @item.ShortDescription</p>
+                <p>Price : @item.Price</p>
             </div>
         </div>
     }
+    @Html.ActionLink("Back to List", "Index")
 </div>
