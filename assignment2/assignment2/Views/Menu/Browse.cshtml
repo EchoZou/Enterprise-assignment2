@@ -13,7 +13,7 @@
     {
         <div class="col-sm-6 col-md-3">
             <div class="thumbnail">
-                <img src="@item.URL" alt="@item.Title" />
+                <img src="@item.URL" alt="@item.Title" height="100" width="150"/>
                 <p>@Html.ActionLink(item.Title, "Details", new { id = item.ItemID })</p>
                 <p>ShortDescription: @item.ShortDescription</p>
                 <p>Price : @item.Price</p>
