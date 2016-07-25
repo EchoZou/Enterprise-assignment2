@@ -19,6 +19,12 @@
     padding-left:18%;
 }
 
+.thumbnail img
+{
+    height:100px;
+    width:150px;
+}
+
 body
 {
 	font-family: Arial, Helvetica, sans-serif;
