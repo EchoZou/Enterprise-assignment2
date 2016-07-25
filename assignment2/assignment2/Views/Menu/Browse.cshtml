@@ -8,14 +8,16 @@
 
 <h2>Browsing Menu: @Model.Name</h2>
 
-<div>
+<div class="col-md-offset-4 col-md-8">
     @foreach (Item item in Model.Items)
     {
-        <div class="thumbnail">
-            <img src="@item.URL" alt="@item.Title" />
-            <p>@Html.ActionLink(item.Title, "Details", new { id = item.ItemID })</p>
-            <p>ShortDescription: @item.ShortDescription</p>
-            <p>Price : @item.Price</p>
+        <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <img src="@item.URL" alt="@item.Title" />
+                <p>@Html.ActionLink(item.Title, "Details", new { id = item.ItemID })</p>
+                <p>ShortDescription: @item.ShortDescription</p>
+                <p>Price : @item.Price</p>
+            </div>
         </div>
     }
     @Html.ActionLink("Back to List", "Index")
