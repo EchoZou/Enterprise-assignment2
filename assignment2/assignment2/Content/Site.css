@@ -10,9 +10,13 @@
     text-align:center;
 }
 
-.image
+.imageA
 {
     padding-left:20%;
+}
+.imageB
+{
+    padding-left:18%;
 }
 
 body
