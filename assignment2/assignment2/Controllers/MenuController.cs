@@ -7,8 +7,7 @@ using assignment2.Models;
 
 namespace assignment2.Controllers
 {
-   
-    public class StoreController : Controller
+    public class MenuController : Controller
     {
         RestaurantContext storeDB = new RestaurantContext();
 
@@ -16,19 +15,19 @@ namespace assignment2.Controllers
         // GET: /Store/
         public ActionResult Index()
         {
-            List<Genre> genres = storeDB.Genres.ToList();
+            List<Menu> menus = storeDB.Menus.ToList();
 
-            return View(genres);
+            return View(menus);
         }
         //
         // GET: /Store/Browse?genre=Disco
 
-        public ActionResult Browse(string genre = "Appetizer")
+        public ActionResult Browse(string menu = "Appetizer")
         {
             // Retrieve Genre and its Associated Albums from database
-            Genre genreModel = storeDB.Genres.Include("Items").Single(g => g.Name == genre);
+            Menu menuModel = storeDB.Menus.Include("Items").Single(g => g.Name == menu);
 
-            return View(genreModel);
+            return View(menuModel);
         }
         //
         // GET: /Store/Details/5

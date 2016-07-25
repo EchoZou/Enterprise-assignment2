@@ -1,0 +1,22 @@
+﻿@using assignment2.Models
+@model IEnumerable<Menu>
+
+
+@{
+    ViewBag.Title = "Index";
+
+}
+
+<h3>Browse Menus</h3>
+<p>
+    Select from @Model.Count()
+    menu:
+</p>
+
+<ul>
+
+    @foreach (Menu item in Model)
+    {
+        <li>@Html.ActionLink(item.Name, "Browse", new { menu = item.Name })</li>
+    }
+</ul>

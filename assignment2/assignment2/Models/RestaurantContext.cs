@@ -8,11 +8,13 @@ namespace assignment2.Models
     public partial class RestaurantContext : DbContext
     {
         public RestaurantContext()
-            : base("name=RestaurantConnection")
+            : base("name=RestaurantConnect")
         {
         }
 
         public virtual DbSet<Item> Items { get; set; }
-        public virtual DbSet<Genre> Genres { get; set; }
+        public virtual DbSet<Menu> Menus { get; set; }
+
+    
     }
 }

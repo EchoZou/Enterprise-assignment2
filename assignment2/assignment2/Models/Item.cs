@@ -1,36 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
 namespace assignment2.Models
 {
-    public class Item
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
+
+    public partial class Item
     {
-        /// <summary>
-        /// This is the empty constructor
-        /// </summary>
-        public Item()
-        {
+        public int ItemID { get; set; }
 
-        }
+        public int MenuID { get; set; }
 
-        /// <summary>
-        /// This constructor takes one parameter - Title
-        /// </summary>
-        /// <param name="Title"></param>
-        public Item(string Title)
-        {
-            this.Title = Title;
-        }
+        public string Title { get; set; }
 
-        public virtual int ItemID { get; set; }
-        public virtual int GenreId { get; set; }
-        public virtual string Title { get; set; }
-        public virtual string ShortDescription { get; set; }
-        public virtual string DetailedDescription { get; set; }
-        public virtual decimal Price { get; set; }
-        public virtual string URL { get; set; }
-        public virtual Genre Genre { get; set; }
+        public string ShortDescription { get; set; }
+
+        public string DetailedDescription { get; set; }
+
+        public decimal Price { get; set; }
+
+        public string URL { get; set; }
+
+        public virtual Menu Menu { get; set; }
     }
 }
