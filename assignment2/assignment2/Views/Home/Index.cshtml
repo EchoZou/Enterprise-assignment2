@@ -3,14 +3,13 @@
     ViewBag.Title = "Index";
 }
 
-<h2>This is the home page!.</h2>
+<h2 class="index_menu">@Html.ActionLink("Menu", "Index", "Menu")</h2>
 
 <div class="col-md-offset-3 col-md-9">
-    <div class="col-sm-6 col-md-3">
+    <div class="image">
         <img src="~/Assets/Images/restaurant.jpg" />
         <br />
         <img src="~/Assets/Images/restaurant2.JPEG" />
         <br />
-        @Html.ActionLink("Menu", "Index", "Menu")
     </div>
 </div>
