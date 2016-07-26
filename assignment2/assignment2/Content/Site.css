@@ -5,6 +5,26 @@
 	border: none;
 }
 
+.index_menu
+{
+    text-align:center;
+}
+
+.imageA
+{
+    padding-left:20%;
+}
+.imageB
+{
+    padding-left:15%;
+}
+
+.thumbnail img
+{
+    height:100px;
+    width:150px;
+}
+
 body
 {
 	font-family: Arial, Helvetica, sans-serif;

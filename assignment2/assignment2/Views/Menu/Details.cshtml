@@ -6,15 +6,15 @@
 }
 
 <h2>Item: @Model.Title</h2>
-<hr />
+<br />
 <ul>
+    <li>
+        <img src="@Model.URL" alt="@Model.Title" />
+    </li>
     <li>Menu: @Model.Menu.Name</li>
     <li>Detailed Description: @Model.DetailedDescription</li>
     <li>Price: @Model.Price</li>
     <li>
-        Sample:
-        <img src="@Model.URL" alt="@Model.Title" />
-
+        @Html.ActionLink("Back to List", "Index")
     </li>
-
 </ul>
