@@ -16,26 +16,26 @@ namespace assignment2.Controllers
     {
         RestaurantContext storeDB = new RestaurantContext();
 
-        //
-        // GET: /Store/
+        
+        // GET: menu/
         public ActionResult Index()
         {
             List<Menu> menus = storeDB.Menus.ToList();
 
             return View(menus);
         }
-        //
-        // GET: /Store/Browse?genre=Disco
+      
+        // GET: /Menu/Browse?menu=Appetizer
 
         public ActionResult Browse(string menu = "Appetizer")
         {
-            // Retrieve Genre and its Associated Albums from database
+            // Retrieve Menu and its Associated items from database
             Menu menuModel = storeDB.Menus.Include("Items").Single(g => g.Name == menu);
 
             return View(menuModel);
         }
-        //
-        // GET: /Store/Details/5
+      
+        // GET: /Menu/Details
 
         public ActionResult Details(int id = 1)
         {

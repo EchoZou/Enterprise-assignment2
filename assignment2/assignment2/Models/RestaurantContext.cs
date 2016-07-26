@@ -17,6 +17,7 @@ namespace assignment2.Models
         {
         }
 
+        //item and menu DB
         public virtual DbSet<Item> Items { get; set; }
         public virtual DbSet<Menu> Menus { get; set; }
 

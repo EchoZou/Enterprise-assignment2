@@ -11,6 +11,7 @@ namespace assignment2.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
+    //get and set all details of item
     public partial class Item
     {
         public int ItemID { get; set; }
