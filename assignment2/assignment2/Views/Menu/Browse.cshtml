@@ -1,4 +1,11 @@
-﻿@using assignment2.Models
+﻿<!-- //Name: COMP2007 Enterprise Computing Assignment 2  - Summer 2016
+//Author: Mo Zou &　Pui in Kwok
+//Description: This assignment is a MVC restaurant website which is built by MVC framework. There are home, menu, menu manager,
+//contact, register and login pages. User need to register or login to see the menu manager page from navbar. -->
+
+
+
+@using assignment2.Models
 @model Menu
 
 
@@ -15,7 +22,7 @@
             <div class="thumbnail">
                 <img src="@item.URL" alt="@item.Title" />
                 <p>@Html.ActionLink(item.Title, "Details", new { id = item.ItemID })</p>
-                <p>ShortDescription: @item.ShortDescription</p>
+                <p>@item.ShortDescription</p>
                 <p>Price : @item.Price</p>
             </div>
         </div>

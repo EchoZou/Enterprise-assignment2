@@ -193,6 +193,7 @@
     <Content Include="Assets\Images\home-showcase.png" />
     <Content Include="Assets\Images\logo.png" />
     <Content Include="Assets\Images\mango_ice_cream.jpg" />
+    <Content Include="Assets\Images\map.png" />
     <Content Include="Assets\Images\matcha_ice_cream.jpg" />
     <Content Include="Assets\Images\NewYork_Steak.jpg" />
     <Content Include="Assets\Images\noodles.jpg" />
@@ -284,6 +285,7 @@
     <Content Include="Views\MenuManager\Details.cshtml" />
     <Content Include="Views\MenuManager\Edit.cshtml" />
     <Content Include="Views\MenuManager\Index.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
