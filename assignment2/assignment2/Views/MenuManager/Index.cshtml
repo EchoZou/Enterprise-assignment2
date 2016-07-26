@@ -13,10 +13,12 @@
 }
 
 <h2>Index</h2>
-
+<!--add new -->
 <p>
     <a href="@Url.Action("Create")" class="btn btn-default" title="Edit"><i class="fa fa-plus"></i>Add new item</a>
 </p>
+
+<!-- table of all details -->
 <table class="table">
     <tr>
         <th>
@@ -62,6 +64,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.URL)
         </td>
+        <!-- info, edit, delete icons -->
         <td>
             <a href="@Url.Action("Edit", new { id = item.ItemID })" class="btn btn-default" title="Edit"><i class="fa fa-pencil"></i></a>
         </td>

@@ -13,6 +13,7 @@
     @Html.AntiForgeryToken()
 
     <ul class="nav navbar-nav navbar-right">
+        <!-- after login user can see menu manager on navbar -->
         <li>@Html.ActionLink("MenuManager", "Index", "MenuManager")</li>
         <li>
             @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })

@@ -15,6 +15,7 @@ namespace assignment2.Models
     {
         protected override void Seed(RestaurantContext context)
         {
+            //menu schema
             var menus = new List<Menu>
             {
                 new Menu { Name = "Appetizer" },
@@ -23,8 +24,10 @@ namespace assignment2.Models
                 new Menu { Name = "Beverages" }
             };
 
+            //item schema
             new List<Item>
             {
+                
                 new Item { Title = "Seaweed Salad", Menu = menus.Single(g => g.Name == "Appetizer"), ShortDescription="short description", DetailedDescription="this is detailed description", Price = 8.99M, URL = "/Content/Images/placeholder.gif" },
                 new Item { Title = "Tofu soup", Menu = menus.Single(g => g.Name == "Appetizer"), ShortDescription="short description", DetailedDescription="this is detailed description", Price = 8.99M, URL = "/Content/Images/placeholder.gif" },
                 new Item { Title = "New York Steak", Menu = menus.Single(g => g.Name == "Appetizer"), ShortDescription="short description", DetailedDescription="this is detailed description", Price = 8.99M, URL = "/Content/Images/placeholder.gif" },
