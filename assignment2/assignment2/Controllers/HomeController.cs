@@ -12,5 +12,10 @@ namespace assignment2.Controllers
         {
             return View();
         }
+
+        public ActionResult Contact()
+        {            
+            return View();
+        }
     }
 }

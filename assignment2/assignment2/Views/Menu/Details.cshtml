@@ -1,4 +1,11 @@
-﻿@using assignment2.Models
+﻿<!-- //Name: COMP2007 Enterprise Computing Assignment 2  - Summer 2016
+//Author: Mo Zou &　Pui in Kwok
+//Description: This assignment is a MVC restaurant website which is built by MVC framework. There are home, menu, menu manager,
+//contact, register and login pages. User need to register or login to see the menu manager page from navbar. -->
+
+
+
+@using assignment2.Models
 @model Item
 
 @{
@@ -7,14 +14,15 @@
 
 <h2>Item: @Model.Title</h2>
 <br />
-<ul>
-    <li>
-        <img src="@Model.URL" alt="@Model.Title" />
-    </li>
-    <li>Menu: @Model.Menu.Name</li>
-    <li>Detailed Description: @Model.DetailedDescription</li>
-    <li>Price: @Model.Price</li>
-    <li>
+
+<div class="container">
+    <img src="@Model.URL" alt="@Model.Title" />
+    <hr />
+    Menu: @Model.Menu.Name<br />
+    Details: @Model.DetailedDescription<br />
+    Price: @Model.Price<br />
+   
+    <br />
         @Html.ActionLink("Back to List", "Index")
-    </li>
-</ul>
+
+</div>

@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿<!-- //Name: COMP2007 Enterprise Computing Assignment 2  - Summer 2016
+//Author: Mo Zou &　Pui in Kwok 
+//Description: This assignment is a MVC restaurant website which is built by MVC framework. There are home, menu, menu manager, 
+//contact, register and login pages. User need to register or login to see the menu manager page from navbar. -->
+
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -24,6 +30,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Menu", "Index", "Menu")</li>
+                    <li>@Html.ActionLink("Contact", "Index", "Home/Contact")</li>
                 </ul>
                 
             </div>
@@ -33,7 +40,8 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+
+            <p style="text-align: center;">&copy; @DateTime.Now.Year - MVC restaurant</p>
         </footer>
     </div>
 
